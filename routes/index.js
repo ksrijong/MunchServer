@@ -43,16 +43,28 @@ router.post('/munchlist', function(req,res) {
   }
   else {
     collection.insert(req.body, function(err, result) {
-
-    res.send(
-      (err === null) ? {msg: 'Successfully created Munch'} : {msg: err}
-      );
-  });
-}
+      res.send((err === null) ? {msg: 'Successfully created Munch'} : {msg: 'error' + err});
+    });
+  }
 });
 
-/*
- *
- */
+/* DELETE: delete a post */
+router.delete('/deletemunch/:id', function(req, res) {
+  var db = req.db;
+  var collection = db.get('munchcollection');
+  var munchToDelete = req.params.id;
+
+  collection.remove({ '_id' : munchToDelete }, function(err) {
+    res.send((err === null) ? {msg: 'Successfully deleted Munch'} : {msg: 'error' + err});
+  });
+
+});
+
+/* PUT: edit a post*/
+router.put('/editmunch', function(req,res) {
+  console.log("Editing munch");
+  var db = req.db;
+  var collection = db.get('munchcollection');
+});
 
 module.exports = router;

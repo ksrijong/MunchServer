@@ -29,7 +29,7 @@ router.post('/munchlist', function(req,res) {
   //console.log(req.body);
   var collection = db.get('munchcollection');
 
-  var errCheck = false;
+  /*var errCheck = false;
   var errorMsg = "";
   if(!req.body.hasOwnProperty('location')){
     errorMsg = "Missing location";
@@ -45,7 +45,9 @@ router.post('/munchlist', function(req,res) {
     collection.insert(req.body, function(err, result) {
       res.send((err === null) ? {msg: 'Successfully created Munch'} : {msg: 'error' + err});
     });
-  }
+  }*/
+  collection.insert(req.body, function(err, result) {
+    res.send((err === null) ? {msg: 'Successfully created Munch'} : {msg: 'error' + err});
 });
 
 /* DELETE: delete a post */
@@ -67,7 +69,11 @@ router.put('/editmunch/:id', function(req,res) {
   var collection = db.get('munchcollection');
   var munchToEdit = req.params.id;
 
-  collection.update( {'_id':munchToEdit}, {$set:{location:"Lemongrass"}}, function(err) {
+  //collection.update( {'_id':munchToEdit}, {$set:{location: req.body.location }}, function(err) {
+  collection.update( {'_id':munchToEdit},
+                      { $set: {location: req.body.location}
+                      },
+                      function(err) {
     res.send((err === null) ? {msg: 'Successfully edited Munch'} : {msg: 'error' + err});
   });
 });

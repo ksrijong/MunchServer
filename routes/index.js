@@ -48,7 +48,7 @@ router.post('/munchlist', function(req,res) {
   }*/
   collection.insert(req.body, function(err, result) {
     res.send((err === null) ? {msg: 'Successfully created Munch'} : {msg: 'error' + err});
-  }
+  });
 });
 
 /* DELETE: delete a post */
@@ -64,19 +64,27 @@ router.delete('/deletemunch/:id', function(req, res) {
 });
 
 /* PUT: edit a post*/
-/*router.put('/editmunch/:id', function(req,res) {
+router.put('/editmunch/:id', function(req,res) {
   console.log("Editing munch");
   var db = req.db;
   var collection = db.get('munchcollection');
   var munchToEdit = req.params.id;
 
-  //collection.update( {'_id':munchToEdit}, {$set:{location: req.body.location }}, function(err) {
   collection.update( {'_id':munchToEdit},
-                      { $set: {location: req.body.location}
+                      { $set: {postName: req.body.postName,
+                               location: req.body.location,
+                               description: req.body.description,
+                               year: req.body.year,
+                               month: req.body.month,
+                               day: req.body.day,
+                               hourS: req.body.hourS,
+                               minuteS: req.body.minuteS,
+                               hourE: req.body.hourE,
+                               minuteE: req.body.minuteE}
                       },
                       function(err) {
     res.send((err === null) ? {msg: 'Successfully edited Munch'} : {msg: 'error' + err});
   });
-});*/
+});
 
 module.exports = router;

@@ -48,6 +48,7 @@ router.post('/munchlist', function(req,res) {
   }*/
   collection.insert(req.body, function(err, result) {
     res.send((err === null) ? {msg: 'Successfully created Munch'} : {msg: 'error' + err});
+  }
 });
 
 /* DELETE: delete a post */

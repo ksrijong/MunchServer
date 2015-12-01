@@ -63,7 +63,7 @@ router.delete('/deletemunch/:id', function(req, res) {
 });
 
 /* PUT: edit a post*/
-router.put('/editmunch/:id', function(req,res) {
+/*router.put('/editmunch/:id', function(req,res) {
   console.log("Editing munch");
   var db = req.db;
   var collection = db.get('munchcollection');
@@ -76,6 +76,6 @@ router.put('/editmunch/:id', function(req,res) {
                       function(err) {
     res.send((err === null) ? {msg: 'Successfully edited Munch'} : {msg: 'error' + err});
   });
-});
+});*/
 
 module.exports = router;

@@ -1,0 +1,61 @@
+
+> munch1@0.0.0 start /home/ubuntu/MunchServer
+> node ./bin/www
+
+{ [Error: Cannot find module '../build/Release/bson'] code: 'MODULE_NOT_FOUND' }
+js-bson: Failed to load c++ bson extension, using pure JS version
+[0mPOST / [33m404 [0m268.553 ms - 1084[0m
+Creating munch
+[0mPOST /munchlist [32m200 [0m5.164 ms - 36[0m
+Creating munch
+[0mPOST /munchlist [32m200 [0m1.768 ms - 36[0m
+Getting munch list
+[0mGET /getmunchlist [32m200 [0m4.584 ms - 612[0m
+npm ERR! weird error 143
+npm WARN This failure might be due to the use of legacy binary "node"
+npm WARN For further explanations, please read
+/usr/share/doc/nodejs/README.Debian
+ 
+npm ERR! not ok code 0
+
+> munch1@0.0.0 start /home/ubuntu/MunchServer
+> node ./bin/www
+
+{ [Error: Cannot find module '../build/Release/bson'] code: 'MODULE_NOT_FOUND' }
+js-bson: Failed to load c++ bson extension, using pure JS version
+Getting munch list
+[0mGET /getmunchlist [32m200 [0m8.327 ms - 612[0m
+[0mGET / [32m200 [0m245.101 ms - 170[0m
+Hello
+[0mGET /stylesheets/style.css [32m200 [0m1.950 ms - 111[0m
+[0mGET /favicon.ico [33m404 [0m19.035 ms - 1084[0m
+[0mGET /munchlist [33m404 [0m9.517 ms - 1084[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.912 ms - -[0m
+Getting munch list
+[0mGET /getmunchlist [32m200 [0m1.573 ms - 612[0m
+Getting munch list
+[0mGET /getmunchlist [36m304 [0m1.209 ms - -[0m
+Getting munch list
+[0mGET /getmunchlist [36m304 [0m0.961 ms - -[0m
+Getting munch list
+[0mGET /getmunchlist [36m304 [0m1.602 ms - -[0m
+Getting munch list
+[0mGET /getmunchlist [36m304 [0m0.836 ms - -[0m
+Getting munch list
+[0mGET /getmunchlist [36m304 [0m0.942 ms - -[0m
+Getting munch list
+[0mGET /getmunchlist [36m304 [0m1.586 ms - -[0m
+Getting munch list
+[0mGET /getmunchlist [36m304 [0m0.798 ms - -[0m
+Getting munch list
+[0mGET /getmunchlist [32m200 [0m0.861 ms - 612[0m
+Getting munch list
+[0mGET /getmunchlist [36m304 [0m0.873 ms - -[0m
+Getting munch list
+[0mGET /getmunchlist [36m304 [0m0.835 ms - -[0m
+Getting munch list
+[0mGET /getmunchlist [36m304 [0m0.734 ms - -[0m
+Getting munch list
+[0mGET /getmunchlist [36m304 [0m1.519 ms - -[0m
+Getting munch list
+[0mGET /getmunchlist [36m304 [0m0.803 ms - -[0m

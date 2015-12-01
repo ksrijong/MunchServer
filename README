@@ -1,0 +1,7 @@
+To start server:
+	nohup npm start &
+
+To stop server:
+	pkill node
+
+(Or use node forever)

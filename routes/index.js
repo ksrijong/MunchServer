@@ -67,7 +67,7 @@ router.put('/editmunch/:id', function(req,res) {
   var collection = db.get('munchcollection');
   var munchToEdit = req.params.id;
 
-  collection.update( {'_id':munchToEdit}, {$set:{req.body}}, function(err) {
+  collection.update( {'_id':munchToEdit}, {$set:{location:"Lemongrass"}}, function(err) {
     res.send((err === null) ? {msg: 'Successfully edited Munch'} : {msg: 'error' + err});
   });
 });
